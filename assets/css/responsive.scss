@@ -1,0 +1,311 @@
+
+$font-size-hedding-18: 1.125rem;
+$font-size-hedding-22: 1.375rem;
+$font-size-hedding-16: 1rem;
+$font-size-hedding-12: 0.75rem;
+@mixin gridCenter() {
+    display: grid;
+    place-items: center;
+  }
+@mixin absolutrCenter() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+//responsive for XXXXL container
+@media (min-width: 102.75rem) and (max-width: 120rem) 
+{
+    .container{
+        max-width: 102.75rem}
+}
+//responsive for XXL to XXXL container 
+@media (min-width: 87.5rem) and (max-width: 102.688rem) 
+{
+    .container{
+        max-width: 82.5rem;
+    }
+    .text-normal{
+        font-size: $font-size-hedding-18 !important;
+    }
+    .text-heading{
+        font-size: $font-size-hedding-22 !important;
+    }
+    #body{
+        .contact{
+            &__typetext{
+                width: 53.625rem;
+                &--btn{
+                    left: 73%;
+                    top: 16%;
+                }
+            }
+        }
+    }
+}
+//responsive for Large to XXL container
+@media (min-width: 62rem) and (max-width: 87.438rem) 
+{
+    .text-normal{
+        font-size: $font-size-hedding-12 !important;
+    }
+    .text-heading{
+        font-size: $font-size-hedding-16 !important;
+    }
+    #body{
+        .news{
+            .card-body{
+                p{
+                    margin: 0.5rem 0rem;
+                }
+                @include gridCenter();
+                align-content: center;
+            }
+        }
+        .contact{
+            &__typetext{
+                width: 48rem;
+                &--btn{
+                    left: 70%;
+                    top: 16%;
+                }
+            }
+        }
+    }
+}
+//responsive for Large to Extra Large container
+@media (min-width: 62rem) and (max-width: 75rem) 
+{
+    #body{
+        .contact{
+            &__typetext{
+                width: 53.625rem;
+                &--btn{
+                    left: 73%;
+                    top: 16%;
+                }
+            }
+        }
+    }
+}
+//responsive for less than Large
+@media(max-width:61.938rem){
+
+    .text-normal{
+        font-size: $font-size-hedding-18 !important;
+    }
+    .text-heading{
+        font-size: $font-size-hedding-22 !important;
+    }
+    #body {
+        .slider{
+            h1{
+                font-size: 4rem;
+            }
+        }
+        .contact{
+            &__heading{
+                font-size: 4rem;
+            }
+            &__subheading{
+                font-size: 0.1rem;
+                
+            }
+            &__typetext{
+                width: 29.25rem;
+                &--btn{
+                    left: 50%;
+                    top: 16%;
+                }
+            }
+            .gridDecorate1{
+                width: 5rem;
+                height: auto;
+            }
+            .gridDecorate2{
+                left: 80%;
+                width: 5rem;
+                height: auto;
+            }
+    }
+    #header{
+        .header-content {
+        
+            .topbar{
+                padding-bottom: 5rem;
+                &__links{
+                    &__item{
+                        padding: 0.375rem 0rem;
+                        justify-content: flex-start !important;
+                        span{
+                            margin: 0px 0.375rem;
+                        }
+                    }
+                }
+            }
+            .navbar{
+                position: relative;
+                &__logo{
+                    .menu-bar{
+                        color: #2abb64;
+                        display: block !important;
+                        font-size: 40px;
+                        position: absolute;
+                        right: 1rem;
+                        top: 1.5rem;
+
+                    }
+                }
+                &__nav{
+                    &__handle{
+                        width: 100%;
+                        &--item{
+                            z-index: 1;
+                            display: none !important;
+                            min-width: 20rem;
+                            position:absolute;
+                            top:70%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background-color: #edf8f4;
+                            box-shadow: 0 0 5px rgba(0, 0, 0 , 2);
+                            a{  
+                                font-size: 24px;
+                                text-align: center;
+                                line-height: 95px;
+                                color: #747474;
+                                text-transform: uppercase;
+                                padding: 0 12px;
+                            }
+                            li{
+                                width: 100%;
+                                display: inline; 
+                            }
+                            a:hover{
+                                color: black;
+                            }
+                            .btnresponsive{
+                                color: #2abb64;
+                                text-decoration:none;
+                                text-transform: capitalize;
+                                font-size: 24px;
+                                font-weight: bold;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                            }
+                        }
+                        .visible{
+                            display: block !important;
+                        }
+                    }
+                }
+                &__btn{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    
+}
+//responsive for less than small container
+@media(max-width:36rem){
+    .text-normal{
+        font-size: $font-size-hedding-12 !important;
+    }
+    .text-heading{
+        font-size: $font-size-hedding-16 !important;
+    }
+    #body {
+        .slider{
+            h1{
+                font-size: 3rem;
+            }
+        }
+        .news{
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            .hotnews{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .normalnews{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+            .card-body{
+                padding: 0.5rem;
+                .card-text{
+                    margin: 0px;
+                    line-height: 1.5rem;
+                }
+            }
+
+
+        }
+        .contact{
+            &__heading{
+                font-size: 3rem;
+                text-align: center;
+            }
+            &__subheading{
+                font-size: 0.1rem;
+                
+            }
+            &__typetext{
+                position: relative;
+                @include absolutrCenter();
+                width: 14.625rem;
+                padding-bottom: 4.5rem;
+                &--input{
+                    @include absolutrCenter();
+                    width: 100%;
+                    height: 2rem;
+                    font-size: $font-size-hedding-12;
+                    border: none;
+                    border-radius: 2.75rem;
+                    padding: 1.125rem;
+                    margin-bottom: 4.5rem;
+                    border-color:white;
+                }
+                &--btn{
+                    font-size: $font-size-hedding-12;
+                    height: 2rem;
+                    width: 6rem;
+                    left: 58%;
+                    top:3%;
+                }
+            }
+            .gridDecorate1{
+                width: 3rem;
+                height: auto;
+            }
+            .gridDecorate2{
+                left: 75%;
+                top: 50%;
+                width: 3rem;
+                height: auto;
+            }
+    }
+    }
+    
+    }
+    #footer{
+        .content{
+            &__nav{
+                &__list{
+                    &__item{
+                        text-align: center;
+                    }}
+        }}
+        .license{
+            p{
+                text-align: center;
+            }
+            &__list__item{
+                justify-content: center;
+            }
+        }
+    }
+
+}

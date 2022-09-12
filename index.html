@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBlog</title>
+    <link rel="stylesheet" href="./assets/lib/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel='shortcut icon' href='./assets/img/decorate/decorate1.png' />
+</head>
+<body>
+    <!-- Header blog-->
+    <header id="header">
+        <div class="header-content container">
+            <!-- infomation bar of blog-->
+            <div class="topbar row">
+                <div class="topbar__information col-md-9">
+                    <div class="topbar__information__item row">
+                        <div class="topbar__information__item--datetime col-lg-5">
+                            <i class="fa-solid fa-clock"></i>
+                            <p class="text-normal">Monday - Friday 9 AM - 5 PM</p>
+                        </div>
+                        <div class="topbar__information__item--location col-lg-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="text-normal">2491 daffodil lane, LA</p>
+                        </div>
+                        <div class="topbar__information__item--phone col-lg-3">
+                            <i class="fa-solid fa-phone"></i> 
+                            <p class="text-normal">(+1) 923 2341 22</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar__links col-lg-3">
+                    <div class="topbar__links__item d-flex justify-content-end">
+                        <span class="topbar__links__item--dr"><a href="">dr</a></span>
+                        <span class="topbar__links__item--be"><a href="">be</a></span>
+                        <span class="topbar__links__item--li"><a href="">li</a></span>
+                        <span class="topbar__links__item--ig"><a href="">ig</a></span>
+                        <span class="topbar__links__item--fb"><a href="">fb</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- navigation bar of blog-->
+            <div class="navbar row">
+                <div class="navbar__logo col-lg-3">
+                    <img src="./assets/img/logo/logo.png" alt="logo">
+                    <span>
+                        <i class="fa fa-solid fa-bars font-icon menu-item menu-bar"></i>
+                    </span>
+                </div>
+                <div class="navbar__nav col-lg-6">
+                    <nav class="navbar__nav__handle">
+                        <ul class="navbar__nav__handle--item d-flex justify-content-between nav "id="start-menu">
+                            <li class="text-normal"> <a class="nav-link font-text" href="#">home</a> </li>
+                            <li class="text-normal"> <a class="nav-link font-text" href="#">about us</a> </li>
+                            <li class="text-normal"> <a class="nav-link font-text" href="#">services</a> </li>
+                            <li class="text-normal"> <a class="nav-link font-text" href="#">blog</a> </li>
+                            <li class="text-normal"> <a class="nav-link font-text" href="#">contact us</a> </li>
+                            <li class="text-normal"> <a href="#" class="btnresponsive">getting strarted <i class="fa-solid fa-chevron-right"></i> </a> </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navbar__btn col-md-3 d-flex justify-content-end">
+                    <button class="btn btn-primary">
+                        getting strarted
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Body blog -->
+    <body id="body">
+        <!-- slider for blog -->
+        <section class="slider container-fluid">
+            <img class="decorate1" src="./assets/img/decorate/decorate1.png" alt="">
+            <img class="decorate2" src="./assets/img/decorate/decorate2.png" alt="">
+            <img class="decorate3" src="./assets/img/decorate/decorate3.png" alt="">
+            <h1>Read the latest News</h1>
+        </section>
+        <!-- hotnews in blog -->
+        <section class="news container">
+            <div class="hotnews">
+                <div class="hotnews__list row">     
+                    <div class="hotnews__list__item  col-lg-6">
+                        <div class="row">
+                            <div class="hotnews__list__item--image col-5 ">
+                                <img class="card-img-right" src="./assets/img/news/item1.png" alt="Card image">
+                            </div>
+                            <div class="hotnews__list__item__body card-body col-7">
+                                <h4 class="hotnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="hotnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="hotnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotnews__list__item  col-lg-6">
+                        <div class="row">
+                            <div class="hotnews__list__item--image col-5">
+                                <img class="card-img-right" src="./assets/img/news/item1.png" alt="Card image">
+                            </div>
+                            <div class="hotnews__list__item__body card-body col-7">
+                                <h4 class="hotnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="hotnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="hotnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="normalnews">
+                <div class="normalnews__list row d-flex justify-content-between">
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new1.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new2.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new3.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new4.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new5.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new6.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new7.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="normalnews__list__item col-lg-3 col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="./assets/img/normal_news/new8.jpg" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="normalnews__list__item__body--title card-title text-heading">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed.</h4>
+                                <p class="normalnews__list__item__body--text card-text text-normal">Lorem ipsum dolor sit amet, con sec tetur adipiscing elit, sed do eiusmod.</p>
+                                <a href="#" class="normalnews__list__item__body--btn">Read More <i class="fa-solid fa-chevron-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_load d-flex justify-content-center">
+                <button class="btn btn-primary">
+                    load more
+                </button>
+            </div>
+        </section>
+        <section class="contact">
+            <h2 class="contact__heading">Let Us Send You Offering</h2>
+            <sub class="contact__subheading">Let's talk with us and more explore how we doing our works.</sub>
+            <div class="contact__typetext">
+                <input class="contact__typetext--input" placeholder="Your Email" >
+                <button class="contact__typetext--btn btn-primary">
+                    load more
+                </button>
+            </div>
+            <img class="decorate1" src="./assets/img/decorate/decorate1.png" alt="decorate1">
+            <img class="decorate2" src="./assets/img/decorate/decorate2.png" alt="decorate1">
+            <img class="decorate3" src="./assets/img/decorate/decorate3.png" alt="decorate1">
+            <img class="gridDecorate1" src="./assets/img/decorate/gridDecorate.png" alt="gridDecorate">
+            <img class="gridDecorate2" src="./assets/img/decorate/gridDecorate.png" alt="gridDecorate">
+        </section>
+    </body>
+    
+    <!-- Footer blog-->
+    <footer id="footer">
+        <div class="footer-infomation container">
+            <section class="content row ">
+                <div class="content__decription col-md-4">
+                    <div class="content__decription--logo">
+                        <img src="./assets/img/logo/logo.png" alt="logo">
+                    </div>
+                    <div class="content__decription--body">
+                        <p class="text-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque, mauris eu quis ultricies viverra dui venenatis. Eu odio sit tincidunt elementum a. Vulputate egestas sed gravida ut purus id tristique. Eu feugiat aliquam egestas convallis ultrices tellus
+                        </p>
+                    </div>
+                </div>
+                <div class="content__nav col-md-8">
+                    <div class="content__nav__list row ">
+                        <ul class="content__nav__list__item nav flex-column col-md-4 ">
+                            <div class="content__nav__list__item--header">
+                                Services
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Financial Consulting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Human Resource</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Business Plan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Strategy Business</a>
+                            </li>
+                        </ul>
+                        <ul class="content__nav__list__item nav flex-column col-md-4">
+                            <div class="content__nav__list__item--header">
+                                Company
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Our Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <ul class="content__nav__list__item nav flex-column col-md-4">
+                            <div class="content__nav__list__item--header">
+                                Support
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Terms of Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Code of Conduct</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="license row" >
+                <div class="license__content col-md-4 text-normal">
+                    <p>@2020 TanahAir Studio. All rights reserved.</p>
+                </div>
+                <div class="license__list col-md-8">
+                    <div class="row">
+                        <ul class="license__list__item nav text-normal">
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-normal" href="#">Terms and Condition</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/script/jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="assets/script/popper.min.js"></script>
+    <script type="text/javascript" src="assets/lib/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/script/script.js"></script>
+</body>
+</html>

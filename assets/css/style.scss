@@ -1,0 +1,401 @@
+// -------------------------------Reset CSS-------------------------------
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// -------------------------Write SCSS-------------------------
+$base_color:#edf8f4;
+$btn_color:#2abb64;
+$bodder_btn_color:#05ad43;
+$normal_text_color:#747474;
+$heading_text_color: black;
+$color_text_in_btn:white;
+$text_font:1.375rem;
+$heading_3_font: 2rem;
+$heading_2_font: 4.25rem;
+@mixin gridCenter() {
+    display: grid;
+    place-items: center;
+  }
+@mixin absolutrCenter() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin createButton($color_text_in_btn,$btn_color,$bodder_btn_color) {
+    width: 13.5rem;
+    height: 4rem;
+    color: $color_text_in_btn;
+    background-color: $btn_color;
+    border-radius: 2rem;
+    border: 1px solid $bodder_btn_color;
+    text-transform: capitalize;
+    font-size: $text_font;
+}
+@mixin createButtonReadmore {
+    color: $btn_color;
+    text-decoration:none;
+    text-transform: capitalize;
+    font-size: $text_font;
+    font-weight: bold;
+    
+}
+@mixin createCard{
+        padding: 0.5rem;
+        &--image{
+            @include gridCenter();
+            img{
+                width: 100%;
+                height: auto;
+                display:block;
+                border-radius: 1rem 0rem 0rem 1rem;
+                // vertical-align: middle;
+            }
+        }
+        &__body{
+            padding: 2.75rem 2.25rem 2.75rem 2.25rem;
+            &--title{
+                font-size:$heading_3_font;
+                font-weight: bold;
+                text-align: justify;
+            }
+            &--text{
+                margin-top: 2.5rem;
+                margin-bottom: 2.5rem;
+                font-size:$text_font;
+                color: $normal_text_color;
+                text-align: justify;
+                line-height: 2.75rem;
+                
+            }
+            &--btn{                   
+                @include createButtonReadmore()
+            }
+            &--btn:hover{
+                opacity: 75%;
+            }
+        }
+}
+.hiddend{
+    display: none;
+  }
+#header {
+    background-color: $base_color;
+    .header-content {
+        
+        .topbar{
+            height: 6.5rem;
+            padding: 2.25rem 0rem;
+            &__information{
+                &__item{
+                    color: $normal_text_color;
+                    p{
+                        font-size: $text_font;
+                        display: inline;
+                        margin: 0px 0.375rem;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            &__links{
+                &__item{
+                    span{
+                        margin: 0rem 0.375rem;
+                        height: 2rem;
+                        width: 2rem;
+                        background-color: $btn_color;
+                        border-radius: 50%;
+                        border: 1px solid $bodder_btn_color;
+                        a{
+                            color: $color_text_in_btn;
+                            padding-top: 15%;
+                            @include gridCenter();
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar{
+            padding: 2.25rem 0rem;
+            &__nav{
+                &__handle{
+                    &--item{
+                        li{
+                            a{
+                                font-size: $text_font;
+                                text-transform: capitalize;
+                                color: $normal_text_color;
+                                font-weight: 700;
+                            }
+                            a:hover{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            &__btn{
+                button{
+                    
+                    @include createButton($color_text_in_btn,$btn_color,$bodder_btn_color);
+                }
+                button:hover{
+                    @include createButton($btn_color,$color_text_in_btn,$bodder_btn_color);
+                }
+            }
+        }
+    }
+    
+}
+#body {
+    .slider{
+        background-color: $base_color;
+        height: 27.5rem;
+        position: relative;
+
+        h1{
+            width: 70%;
+            text-align: center;
+            font-size: 4.25rem;
+            color: $heading_text_color;
+            font-weight: 700;
+            @include absolutrCenter();
+            top:30%;
+        }
+        .decorate1{
+            position: absolute;
+            left: 80%;
+            top: 30%;
+        }
+        .decorate2{
+            position: absolute;
+            left: 55%;
+            top: 70%;
+        }
+        .decorate3{
+            position: absolute;
+            left: 15%;
+            top: 45%;
+        }
+    }
+    .news{
+        margin-top: 6.375rem;
+        margin-bottom: 6.375rem;
+        .hotnews{
+            padding-top: 4.125rem;
+            padding-bottom: 4.125rem;
+            &__list{
+                &__item{
+                    @include createCard();
+                }
+            }
+        }
+        .normalnews{
+            padding-top: 4.125rem;
+            padding-bottom: 4.125rem;
+            &__list{
+                &__item{
+                    @include createCard();
+                    padding-bottom: 2.25rem;
+                    .card{
+                        --bs-card-border-color:none;
+                        img{
+                            border-radius: 1rem 1rem 0rem 0rem;
+                        }
+                    }
+                }
+            }
+        }
+        .btn_load{
+            padding-bottom: 4.125rem;
+            button{       
+                @include createButton($btn_color,$color_text_in_btn,$bodder_btn_color);
+            }
+            button:hover{
+                @include createButton($color_text_in_btn,$btn_color,$bodder_btn_color);
+            }
+        }
+    }
+    .contact{
+        position: relative;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        height: 35rem;
+        background-color: $base_color;
+        &__heading{
+            font-size: $heading_2_font;
+            @include gridCenter();
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+            font-weight: bold;
+        }
+        &__subheading{
+            font-size: $text_font;
+            color: $normal_text_color;
+            @include gridCenter();
+            padding-bottom: 4.5rem;
+        }
+        &__typetext{
+            position: relative;
+            @include absolutrCenter();
+            width: 66.7875rem;
+            padding-bottom: 4.5rem;
+            &--input{
+                @include absolutrCenter();
+                width: 100%;
+                height: 5.5rem;
+                font-size: $text_font;
+                border: none;
+                border-radius: 2.75rem;
+                padding: 2.25rem;
+                margin-bottom: 4.5rem;
+                border-color:white;
+            }
+            &--btn{
+                @include createButton($color_text_in_btn,$btn_color,$bodder_btn_color);
+                position: absolute;
+                left: 78%;
+                top: 16%;
+
+            }
+            &--btn:hover{
+                @include createButton($btn_color,$color_text_in_btn,$bodder_btn_color);
+            }
+        }
+        .decorate1{
+            position: absolute;
+            left: 80%;
+            top: 30%;
+        }
+        .decorate2{
+            position: absolute;
+            left: 55%;
+            top: 85%;
+        }
+        .decorate3{
+            position: absolute;
+            left: 15%;
+            top: 45%;
+        }
+        .gridDecorate1{
+            position: absolute;
+            left: 5%;
+            top: 10%;
+        }
+        .gridDecorate2{
+            position: absolute;
+            left: 85%;
+            top: 70%;
+        }
+    }
+}
+#footer {
+    .footer-infomation{
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+        .content{
+            &__decription{
+                // padding-right: 4rem;
+                &--body{
+                    margin-top: 2.5rem;
+                    margin-bottom: 2.5rem;
+                    font-size:$text_font;
+                    color: $normal_text_color;
+                    text-align: justify;
+                    line-height: 2.75rem;
+                }
+            }
+            &__nav{
+                &__list{
+                    &__item{
+                            padding: 0.25rem 4rem;
+                        &--header{
+                            font-size: $text_font;
+                            text-transform: capitalize;
+                            color: $heading_text_color;
+                            font-weight: 700;
+                            padding: 0.5rem 1rem;
+                        }
+                        a{
+                            // padding-left: 0%;
+                            // margin-top: 1.25rem;
+                            font-size:$text_font;
+                            color: $normal_text_color;
+                            line-height: 2.75rem;
+                        }
+                    }
+                }
+            }
+        }
+        .license{
+            &__content{
+                font-size:$text_font;
+                color: $normal_text_color;
+                text-align: justify;
+                line-height: 3.75rem;
+            }
+            &__list{
+               &__item{
+                a{
+                    font-size:$text_font;
+                    color: $normal_text_color;
+                    line-height: 2.75rem;
+                    justify-content: space-around;
+                }
+               }
+            }
+        }
+    }
+}
